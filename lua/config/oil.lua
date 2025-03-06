@@ -10,12 +10,7 @@ oil.setup({
     'mtime',
   },
   float = {
-    padding = 10,
-    max_height = 20,
     border = 'solid',
-    win_options = {
-      winblend = 0,
-    },
   },
   preview = {
     border = 'solid',
