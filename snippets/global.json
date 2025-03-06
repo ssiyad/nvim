@@ -1,0 +1,7 @@
+{
+  "Picsum Placeholder Image": {
+    "prefix": "picsum",
+    "body": ["https://picsum.photos/200"],
+    "description": "Inserts a random 200x200 placeholder image from Picsum"
+  }
+}

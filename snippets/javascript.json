@@ -1,0 +1,9 @@
+{
+  "Console Log with Metadata": {
+    "prefix": "clog",
+    "body": [
+      "console.log('${TM_LINE_NUMBER}', '${TM_FILENAME}', '->', ${1:identifier}, '$1');"
+    ],
+    "description": "Log with filename and line number"
+  }
+}

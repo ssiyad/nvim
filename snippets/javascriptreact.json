@@ -1,0 +1,15 @@
+{
+  "React Functional Component": {
+    "prefix": "component",
+    "body": [
+      "export const ${1:Component} = ({}: {}) => {",
+      "  return (",
+      "    <div>",
+      "      Hello from ${1:Component}!",
+      "    </div>",
+      "  );",
+      "};"
+    ],
+    "description": "Creates a basic React functional component"
+  }
+}

@@ -34,15 +34,6 @@ return {
     opts = require('config.cmp'),
   },
 
-  -- https://github.com/dcampos/nvim-snippy
-  -- Snippet plugin for Neovim written in Lua
-  {
-    'dcampos/nvim-snippy',
-    config = function()
-      require('config.snippy')
-    end,
-  },
-
   -- https://github.com/github/copilot.vim
   -- GitHub Copilot for Vim
   {
