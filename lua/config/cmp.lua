@@ -11,8 +11,6 @@ return {
     ['<C-s>'] = {
       'show',
       'show_documentation',
-      'show_signature',
-      'hide_signature',
       'hide_documentation',
       'fallback',
     },
