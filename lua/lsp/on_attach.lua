@@ -9,7 +9,6 @@ local function f(client, bufnr)
   keymap_set('n', '<Leader>gr', lsp.buf.references)
   keymap_set('n', '<Leader>rn', lsp.buf.rename)
   keymap_set('n', '<Leader>ca', lsp.buf.code_action)
-  keymap_set('v', '<Leader>ca', lsp.buf.code_action)
 
   require('lsp.functions.float_diagnostics')
   require('lsp.functions.goto_definition')
