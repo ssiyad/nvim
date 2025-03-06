@@ -2,7 +2,7 @@ local catppuccin = require('catppuccin')
 
 catppuccin.setup({
   integrations = {
-    cmp = true,
+    blink_cmp = true,
     gitsigns = true,
     markdown = true,
     nvimtree = true,
