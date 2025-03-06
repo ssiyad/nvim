@@ -26,48 +26,21 @@ return {
     end,
   },
 
-  -- A completion plugin for neovim coded in Lua.
-  -- https://github.com/hrsh7th/nvim-cmp
+  -- Performant, batteries-included completion plugin for Neovim.
+  -- https://github.com/saghen/blink.cmp
   {
-    'hrsh7th/nvim-cmp',
-    dependencies = {
-      -- nvim-cmp source for neovim builtin LSP client
-      -- https://github.com/hrsh7th/cmp-nvim-lsp
-      'hrsh7th/cmp-nvim-lsp',
-
-      -- nvim-cmp source for buffer words
-      -- https://github.com/hrsh7th/cmp-buffer
-      'hrsh7th/cmp-buffer',
-
-      -- nvim-cmp source for path
-      -- https://github.com/hrsh7th/cmp-path
-      'hrsh7th/cmp-path',
-
-      -- nvim-cmp source for vim's cmdline
-      -- https://github.com/hrsh7th/cmp-cmdline
-      'hrsh7th/cmp-cmdline',
-
-      -- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
-      'hrsh7th/cmp-nvim-lsp-signature-help',
-    },
-    config = function()
-      require('config.cmp')
-    end,
+    'saghen/blink.cmp',
+    version = '*',
+    opts = require('config.cmp'),
   },
 
+  -- https://github.com/dcampos/nvim-snippy
+  -- Snippet plugin for Neovim written in Lua
   {
-    -- https://github.com/dcampos/nvim-snippy
-    -- Snippet plugin for Neovim written in Lua
-    {
-      'dcampos/nvim-snippy',
-      config = function()
-        require('config.snippy')
-      end,
-    },
-
-    -- https://github.com/dcampos/cmp-snippy
-    -- nvim-snippy completion source for nvim-cmp
-    'dcampos/cmp-snippy',
+    'dcampos/nvim-snippy',
+    config = function()
+      require('config.snippy')
+    end,
   },
 
   -- https://github.com/github/copilot.vim
