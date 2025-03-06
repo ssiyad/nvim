@@ -1,4 +1,21 @@
 return {
+  completion = {
+    menu = {
+      min_width = 40,
+    },
+    documentation = {
+      window = {
+        border = 'solid',
+      },
+    },
+  },
+  -- Signature is an experimental feature. This may change in the future.
+  signature = {
+    enabled = true,
+    window = {
+      border = 'solid',
+    },
+  },
   keymap = {
     -- Disable presets.
     preset = 'none',
