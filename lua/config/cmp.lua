@@ -20,11 +20,11 @@ return {
     -- Disable presets.
     preset = 'none',
 
-    ['<C-d>'] = { 'scroll_documentation_up', 'fallback' },
     ['<C-e>'] = { 'hide' },
-    ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
-    ['<C-j>'] = { 'select_next', 'fallback_to_mappings' },
+    ['<C-u>'] = { 'scroll_documentation_up', 'fallback' },
+    ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
     ['<C-k>'] = { 'select_prev', 'fallback_to_mappings' },
+    ['<C-j>'] = { 'select_next', 'fallback_to_mappings' },
     ['<C-s>'] = {
       'show',
       'show_documentation',
