@@ -8,6 +8,12 @@ return {
     end,
   },
 
+  -- Provides Nerd Font icons (glyphs) for use by neovim plugins
+  -- https://github.com/nvim-tree/nvim-web-devicons
+  {
+    'nvim-tree/nvim-web-devicons',
+  },
+
   -- Quickstart configs for Nvim LSP
   -- https://github.com/neovim/nvim-lspconfig
   {
@@ -197,7 +203,6 @@ return {
   -- https://github.com/stevearc/oil.nvim
   {
     'stevearc/oil.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       require('config.oil')
     end,
