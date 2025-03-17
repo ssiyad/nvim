@@ -11,7 +11,7 @@ return {
   },
   -- Signature is an experimental feature. This may change in the future.
   signature = {
-    enabled = true,
+    enabled = false,
     window = {
       border = 'solid',
     },
