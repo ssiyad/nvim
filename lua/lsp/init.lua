@@ -14,7 +14,7 @@ for _, file in pairs(dir_content) do
   ---@type table
   local config = require('lsp.clients.' .. server_name)
 
-  config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+  config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities, true)
   config.on_attach = config.on_attach or on_attach
   config.handlers = config.handlers or handlers
 
