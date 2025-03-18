@@ -15,7 +15,7 @@ oil.setup({
   preview = {
     border = 'solid',
   },
-  default_file_explorer = false,
+  default_file_explorer = true,
   restore_win_options = true,
   skip_confirm_for_simple_edits = true,
 })
