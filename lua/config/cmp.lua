@@ -1,4 +1,4 @@
-return {
+local M = {
   completion = {
     menu = {
       min_width = 40,
@@ -36,3 +36,5 @@ return {
     ['<Tab>'] = { 'snippet_forward', 'fallback' },
   },
 }
+
+return M
