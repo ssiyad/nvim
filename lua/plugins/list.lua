@@ -101,42 +101,19 @@ return {
   -- Find/List
   -- https://github.com/nvim-telescope/telescope.nvim
   {
-    {
-      'nvim-telescope/telescope.nvim',
-      dependencies = {
-        -- lua utils
-        -- https://github.com/nvim-lua/plenary.nvim/
-        'nvim-lua/plenary.nvim',
-      },
-      config = function()
-        require('config.telescope')
-      end,
-    },
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+      -- lua utils
+      -- https://github.com/nvim-lua/plenary.nvim/
+      'nvim-lua/plenary.nvim',
 
-    -- Live grep with args
-    -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
-    {
+      -- Live grep with args
+      -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
       'nvim-telescope/telescope-live-grep-args.nvim',
-      dependencies = {
-        'nvim-telescope/telescope.nvim',
-      },
-      config = function()
-        require('telescope').load_extension('live_grep_args')
-      end,
     },
-
-    -- FZF sorter for telescope written in c
-    -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
-    {
-      'nvim-telescope/telescope-fzf-native.nvim',
-      dependencies = {
-        'nvim-telescope/telescope.nvim',
-      },
-      build = 'make',
-      config = function()
-        require('telescope').load_extension('fzf')
-      end,
-    },
+    config = function()
+      require('config.telescope')
+    end,
   },
 
   -- A better annotation generator. Supports multiple languages and annotation conventions

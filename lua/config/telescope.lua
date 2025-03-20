@@ -56,6 +56,9 @@ telescope.setup({
   }),
 })
 
+-- Load the live_grep_args extension
+telescope.load_extension('live_grep_args')
+
 keymap_set('n', '<Leader>ff', builtin.find_files)
 keymap_set('n', '<Leader>fr', builtin.lsp_references)
 keymap_set('n', '<Leader>fg', telescope.extensions.live_grep_args.live_grep_args)
