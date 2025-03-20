@@ -9,22 +9,13 @@ oil.setup({
     'size',
     'mtime',
   },
-  float = {
-    border = 'solid',
-  },
-  preview = {
-    border = 'solid',
+  keymaps = {
+    ['<C-v>'] = { 'actions.select', opts = { vertical = true } },
+    ['<C-s>'] = { 'actions.select', opts = { horizontal = true } },
   },
   default_file_explorer = true,
   restore_win_options = true,
   skip_confirm_for_simple_edits = true,
 })
 
-keymap_set('n', '-', function()
-  oil.open(nil, {
-    preview = {
-      horizontal = true,
-      split = 'belowright',
-    },
-  })
-end)
+keymap_set('n', '-', oil.open)
