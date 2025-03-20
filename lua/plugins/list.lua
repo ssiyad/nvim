@@ -162,9 +162,7 @@ return {
   -- https://github.com/nvim-lualine/lualine.nvim
   {
     'nvim-lualine/lualine.nvim',
-    config = function()
-      require('config.lualine')
-    end,
+    opts = require('config.lualine'),
   },
 
   -- markdown preview plugin for (neo)vim

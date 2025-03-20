@@ -1,4 +1,4 @@
-require('lualine').setup({
+local M = {
   options = {
     icons_enabled = true,
     theme = 'auto',
@@ -14,4 +14,6 @@ require('lualine').setup({
     lualine_y = { 'progress' },
     lualine_z = { 'location' },
   },
-})
+}
+
+return M
