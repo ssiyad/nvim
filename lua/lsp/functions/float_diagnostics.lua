@@ -1,7 +1,6 @@
 vim.api.nvim_create_autocmd('CursorHold', {
-  buffer = bufnr,
   callback = function()
-    local opts = {
+    vim.diagnostic.open_float(nil, {
       border = 'solid',
       close_events = {
         'BufLeave',
@@ -15,7 +14,6 @@ vim.api.nvim_create_autocmd('CursorHold', {
       scope = 'line',
       source = 'if_many',
       style = 'minimal',
-    }
-    vim.diagnostic.open_float(nil, opts)
+    })
   end,
 })
