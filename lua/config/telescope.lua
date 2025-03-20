@@ -2,12 +2,7 @@ local telescope = require('telescope')
 local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
 local themes = require('telescope.themes')
-
-local set_keymap = vim.keymap.set
-local opts = {
-  noremap = true,
-  silent = true,
-}
+local keymap_set = require('utils.keymap_set')
 
 telescope.setup({
   defaults = themes.get_dropdown({
@@ -61,7 +56,6 @@ telescope.setup({
   }),
 })
 
-set_keymap('n', '<Leader>ff', builtin.find_files, opts)
-set_keymap('n', '<Leader>fr', builtin.lsp_references, opts)
-set_keymap('n', '<Leader>gc', builtin.git_commits, opts)
-set_keymap('n', '<Leader>fg', telescope.extensions.live_grep_args.live_grep_args, opts)
+keymap_set('n', '<Leader>ff', builtin.find_files)
+keymap_set('n', '<Leader>fr', builtin.lsp_references)
+keymap_set('n', '<Leader>fg', telescope.extensions.live_grep_args.live_grep_args)
