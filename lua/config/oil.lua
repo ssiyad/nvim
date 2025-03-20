@@ -20,4 +20,11 @@ oil.setup({
   skip_confirm_for_simple_edits = true,
 })
 
-keymap_set('n', '-', oil.toggle_float)
+keymap_set('n', '-', function()
+  oil.open(nil, {
+    preview = {
+      horizontal = true,
+      split = 'belowright',
+    },
+  })
+end)
