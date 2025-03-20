@@ -1,4 +1,5 @@
 local telescope = require('telescope')
+local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
 local themes = require('telescope.themes')
 
@@ -10,6 +11,12 @@ local opts = {
 
 telescope.setup({
   defaults = themes.get_dropdown({
+    mappings = {
+      i = {
+        ['<C-s>'] = actions.select_horizontal,
+        ['<C-v>'] = actions.select_vertical,
+      },
+    },
     borderchars = {
       ' ',
       ' ',
