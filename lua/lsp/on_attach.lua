@@ -11,7 +11,6 @@ local function f(client, bufnr)
   keymap_set('n', '<Leader>ca', lsp.buf.code_action)
 
   require('lsp.functions.float_diagnostics')
-  require('lsp.functions.goto_definition')
   require('lsp.functions.symbol_highlight')(client, bufnr)
 end
 
