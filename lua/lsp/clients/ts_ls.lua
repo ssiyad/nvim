@@ -1,11 +1,9 @@
-local location = '/opt/homebrew/lib/node_modules/@vue/typescript-plugin'
-
-return {
+local M = {
   init_options = {
     plugins = {
       {
         name = '@vue/typescript-plugin',
-        location = location,
+        location = '/opt/homebrew/lib/node_modules/@vue/typescript-plugin',
         languages = {
           'javascript',
           'typescript',
@@ -24,3 +22,5 @@ return {
     'vue',
   },
 }
+
+return M
