@@ -10,5 +10,8 @@ require('plugins')
 -- keymaps
 require('keymaps')
 
+-- auto commands
+require('autocmds')
+
 -- lsp config
 require('lsp')
