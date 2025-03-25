@@ -11,7 +11,7 @@ local M = {
   },
   -- Signature is an experimental feature. This may change in the future.
   signature = {
-    enabled = false,
+    enabled = true,
     window = {
       border = 'solid',
     },
