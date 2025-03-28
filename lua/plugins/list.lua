@@ -38,6 +38,7 @@ return {
     'saghen/blink.cmp',
     version = '*',
     opts = require('config.cmp'),
+    event = 'VeryLazy',
   },
 
   -- https://github.com/github/copilot.vim
