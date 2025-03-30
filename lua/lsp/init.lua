@@ -3,7 +3,6 @@ local dir_content = vim.fn.readdir(clients_path, [[v:val =~ '\.lua$']])
 
 local lspconfig = require('lspconfig')
 local on_attach = require('lsp.on_attach')
-local handlers = require('lsp.handlers')
 
 for _, file in pairs(dir_content) do
   ---@type string[]
@@ -16,7 +15,6 @@ for _, file in pairs(dir_content) do
 
   config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities, true)
   config.on_attach = config.on_attach or on_attach
-  config.handlers = config.handlers or handlers
 
   server.setup(config)
 end
