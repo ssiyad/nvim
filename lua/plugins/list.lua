@@ -45,9 +45,6 @@ return {
   -- GitHub Copilot for Vim
   {
     'github/copilot.vim',
-    config = function()
-      require('config.copilot')
-    end,
   },
 
   -- Add/change/delete surrounding delimiter pairs with ease
