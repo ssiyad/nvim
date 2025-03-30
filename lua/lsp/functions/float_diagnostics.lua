@@ -1,7 +1,6 @@
 vim.api.nvim_create_autocmd('CursorHold', {
   callback = function()
     vim.diagnostic.open_float(nil, {
-      border = 'solid',
       close_events = {
         'BufLeave',
         'CursorMoved',

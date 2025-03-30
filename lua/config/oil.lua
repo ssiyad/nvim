@@ -13,9 +13,6 @@ oil.setup({
     ['<C-v>'] = { 'actions.select', opts = { vertical = true } },
     ['<C-s>'] = { 'actions.select', opts = { horizontal = true } },
   },
-  confirmation = {
-    border = 'solid',
-  },
   default_file_explorer = true,
   restore_win_options = true,
   skip_confirm_for_simple_edits = true,
