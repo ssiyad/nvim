@@ -1,29 +1,36 @@
-local opt = vim.opt
-
-opt.autoindent = true
-opt.autoread = true
-opt.cmdheight = 0
-opt.cursorline = true
-opt.ff = 'unix'
-opt.foldexpr = 'nvim_treesitter#foldexpr()'
-opt.foldlevel = 99
-opt.foldmethod = 'expr'
-opt.guicursor = ''
-opt.ignorecase = true
-opt.incsearch = true
-opt.laststatus = 3
-opt.mouse = ''
-opt.number = true
-opt.relativenumber = true
-opt.shiftwidth = 0
-opt.shortmess:append('WIFS')
-opt.showmode = false
-opt.signcolumn = 'yes:1'
-opt.smartcase = true
-opt.smartindent = true
-opt.spell = true
-opt.tabstop = 4
-opt.termguicolors = true
-opt.updatetime = 750
-
+-- Leader key.
 vim.g.mapleader = ' '
+
+vim.opt.autoindent = true
+vim.opt.autoread = true
+vim.opt.cmdheight = 0
+vim.opt.cursorline = true
+vim.opt.ff = 'unix'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldlevel = 99
+vim.opt.foldmethod = 'expr'
+vim.opt.guicursor = ''
+vim.opt.ignorecase = true
+vim.opt.incsearch = true
+vim.opt.laststatus = 3
+vim.opt.mouse = ''
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.shiftwidth = 0
+vim.opt.shortmess:append('WIFS')
+vim.opt.showmode = false
+vim.opt.signcolumn = 'yes:1'
+vim.opt.smartcase = true
+vim.opt.smartindent = true
+vim.opt.spell = true
+vim.opt.tabstop = 4
+vim.opt.termguicolors = true
+vim.opt.winborder = 'solid'
+vim.opt.updatetime = 750
+
+-- Enabled diagnostic message for current line only.
+vim.diagnostic.config({
+  virtual_text = {
+    current_line = true,
+  },
+})
