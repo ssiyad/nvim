@@ -26,7 +26,7 @@ vim.opt.termguicolors = true
 vim.opt.winborder = 'solid'
 vim.opt.updatetime = 750
 
--- Enabled diagnostic message for current line only.
+-- Enable diagnostic message for current line only.
 vim.diagnostic.config({
   virtual_text = {
     current_line = true,
