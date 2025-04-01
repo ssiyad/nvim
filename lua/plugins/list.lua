@@ -117,13 +117,6 @@ return {
     end,
   },
 
-  -- fast and easy to configure neovim statusline plugin
-  -- https://github.com/nvim-lualine/lualine.nvim
-  {
-    'nvim-lualine/lualine.nvim',
-    opts = require('config.lualine'),
-  },
-
   -- markdown preview plugin for (neo)vim
   -- https://github.com/iamcco/markdown-preview.nvim
   {
