@@ -2,7 +2,6 @@ local keymap_set = require('utils.keymap_set')
 
 keymap_set('n', '<Leader>l', ':noh<CR>')
 keymap_set('n', '<Leader>t', ':vs | term<CR>')
-keymap_set('n', '<Leader>gg', ':tab G<CR>')
 
 -- Window navigation mappings.
 keymap_set('n', '<C-h>', '<C-w>h')
