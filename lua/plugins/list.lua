@@ -108,16 +108,6 @@ return {
     event = 'VeryLazy',
   },
 
-  -- autopairs for neovim
-  -- https://github.com/windwp/nvim-autopairs
-  {
-    'windwp/nvim-autopairs',
-    event = 'InsertEnter',
-    config = function()
-      require('nvim-autopairs').setup({})
-    end,
-  },
-
   -- Automatic indentation style detection
   -- https://github.com/NMAC427/guess-indent.nvim
   {

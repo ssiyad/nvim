@@ -19,5 +19,8 @@ require('mini.indentscope').setup({
   symbol = '│',
 })
 
+-- Autopairs.
+require('mini.pairs').setup()
+
 -- Surround.
 require('mini.surround').setup()
