@@ -30,6 +30,7 @@ return {
     config = function()
       require('config.conform')
     end,
+    event = 'VeryLazy',
   },
 
   -- Performant, batteries-included completion plugin for Neovim.
@@ -54,6 +55,7 @@ return {
     config = function()
       require('nvim-surround').setup({})
     end,
+    event = 'VeryLazy',
   },
 
   -- Git wrapper
@@ -65,6 +67,7 @@ return {
       -- https://github.com/tpope/vim-rhubarb
       'tpope/vim-rhubarb',
     },
+    event = 'VeryLazy',
   },
 
   -- Smart and powerful comment plugin for neovim. Supports treesitter,
@@ -75,6 +78,7 @@ return {
     config = function()
       require('Comment').setup()
     end,
+    event = 'VeryLazy',
   },
 
   -- Git integration for buffers
@@ -84,6 +88,7 @@ return {
     config = function()
       require('config.gitsigns')
     end,
+    event = 'VeryLazy',
   },
 
   -- Nvim Treesitter configurations and abstraction layer
@@ -112,6 +117,7 @@ return {
     config = function()
       require('config.telescope')
     end,
+    event = 'VeryLazy',
   },
 
   -- A better annotation generator. Supports multiple languages and annotation conventions
@@ -125,6 +131,7 @@ return {
     config = function()
       require('config.neogen')
     end,
+    event = 'VeryLazy',
   },
 
   -- autopairs for neovim
@@ -152,6 +159,7 @@ return {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     opts = require('config.indent-blankline'),
+    event = 'VeryLazy',
   },
 
   -- fast and easy to configure neovim statusline plugin
@@ -168,8 +176,8 @@ return {
     build = function()
       vim.fn['mkdp#util#install']()
     end,
+    event = 'VeryLazy',
   },
-
   -- Edit filesystem like a buffer
   -- https://github.com/stevearc/oil.nvim
   {
@@ -177,5 +185,6 @@ return {
     config = function()
       require('config.oil')
     end,
+    event = 'VeryLazy',
   },
 }
