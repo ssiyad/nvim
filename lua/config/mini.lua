@@ -1,3 +1,6 @@
+-- Text objects.
+require('mini.ai').setup()
+
 -- Comment.
 require('mini.comment').setup()
 
