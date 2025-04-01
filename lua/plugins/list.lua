@@ -8,10 +8,15 @@ return {
     end,
   },
 
-  -- Provides Nerd Font icons (glyphs) for use by neovim plugins
-  -- https://github.com/nvim-tree/nvim-web-devicons
+  -- Library of 40+ independent Lua modules improving overall Neovim (version
+  -- 0.8 and higher) experience with minimal effort.
+  -- https://github.com/echasnovski/mini.nvim
   {
-    'nvim-tree/nvim-web-devicons',
+    'echasnovski/mini.nvim',
+    version = false,
+    config = function()
+      require('config.mini')
+    end,
   },
 
   -- Quickstart configs for Nvim LSP
@@ -48,16 +53,6 @@ return {
     'github/copilot.vim',
   },
 
-  -- Add/change/delete surrounding delimiter pairs with ease
-  -- https://github.com/kylechui/nvim-surround
-  {
-    'kylechui/nvim-surround',
-    config = function()
-      require('nvim-surround').setup({})
-    end,
-    event = 'VeryLazy',
-  },
-
   -- Git wrapper
   -- https://github.com/tpope/vim-fugitive
   {
@@ -67,27 +62,6 @@ return {
       -- https://github.com/tpope/vim-rhubarb
       'tpope/vim-rhubarb',
     },
-    event = 'VeryLazy',
-  },
-
-  -- Smart and powerful comment plugin for neovim. Supports treesitter,
-  -- dot repeat, left-right/up-down motions, hooks, and more
-  -- https://github.com/numToStr/Comment.nvim
-  {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end,
-    event = 'VeryLazy',
-  },
-
-  -- Git integration for buffers
-  -- https://github.com/lewis6991/gitsigns.nvim
-  {
-    'lewis6991/gitsigns.nvim',
-    config = function()
-      require('config.gitsigns')
-    end,
     event = 'VeryLazy',
   },
 
@@ -153,15 +127,6 @@ return {
     end,
   },
 
-  -- Indent guides
-  -- https://github.com/lukas-reineke/indent-blankline.nvim
-  {
-    'lukas-reineke/indent-blankline.nvim',
-    main = 'ibl',
-    opts = require('config.indent-blankline'),
-    event = 'VeryLazy',
-  },
-
   -- fast and easy to configure neovim statusline plugin
   -- https://github.com/nvim-lualine/lualine.nvim
   {
@@ -178,6 +143,7 @@ return {
     end,
     event = 'VeryLazy',
   },
+
   -- Edit filesystem like a buffer
   -- https://github.com/stevearc/oil.nvim
   {
