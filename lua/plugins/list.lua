@@ -151,9 +151,7 @@ return {
   {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
-    config = function()
-      require('ibl').setup()
-    end,
+    opts = require('config.indent-blankline'),
   },
 
   -- fast and easy to configure neovim statusline plugin
