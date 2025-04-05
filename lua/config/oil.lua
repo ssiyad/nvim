@@ -23,4 +23,4 @@ oil.setup({
   skip_confirm_for_simple_edits = true,
 })
 
-keymap_set('n', '-', oil.open_float)
+keymap_set('n', '<Leader>o', oil.open_float)
