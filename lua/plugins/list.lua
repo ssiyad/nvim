@@ -75,25 +75,6 @@ return {
     end,
   },
 
-  -- Find/List
-  -- https://github.com/nvim-telescope/telescope.nvim
-  {
-    'nvim-telescope/telescope.nvim',
-    dependencies = {
-      -- lua utils
-      -- https://github.com/nvim-lua/plenary.nvim/
-      'nvim-lua/plenary.nvim',
-
-      -- Live grep with args
-      -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
-      'nvim-telescope/telescope-live-grep-args.nvim',
-    },
-    config = function()
-      require('config.telescope')
-    end,
-    event = 'VeryLazy',
-  },
-
   -- A better annotation generator. Supports multiple languages and annotation conventions
   -- https://github.com/danymat/neogen
   {

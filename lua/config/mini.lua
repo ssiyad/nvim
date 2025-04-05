@@ -1,3 +1,5 @@
+local keymap_set = require('utils.keymap_set')
+
 -- Text objects.
 require('mini.ai').setup()
 
@@ -62,6 +64,28 @@ statusline.setup({
     end,
   },
 })
+
+-- Finder.
+local pick = require('mini.pick')
+pick.setup({
+  window = {
+    config = function()
+      local height = math.floor(0.618 * vim.o.lines)
+      local width = math.floor(0.618 * vim.o.columns)
+      return {
+        anchor = 'NW',
+        height = height,
+        width = width,
+        row = math.floor(0.5 * (vim.o.lines - height)),
+        col = math.floor(0.5 * (vim.o.columns - width)),
+      }
+    end,
+  },
+})
+
+-- Finder mappings.
+keymap_set('n', '<Leader>ff', pick.builtin.files)
+keymap_set('n', '<Leader>fg', pick.builtin.grep_live)
 
 -- Surround.
 require('mini.surround').setup()
