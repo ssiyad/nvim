@@ -13,9 +13,14 @@ oil.setup({
     ['<C-v>'] = { 'actions.select', opts = { vertical = true } },
     ['<C-s>'] = { 'actions.select', opts = { horizontal = true } },
   },
+  float = {
+    max_width = 120,
+    max_height = 20,
+    border = 'single',
+  },
   default_file_explorer = true,
   restore_win_options = true,
   skip_confirm_for_simple_edits = true,
 })
 
-keymap_set('n', '-', oil.open)
+keymap_set('n', '-', oil.open_float)
