@@ -8,7 +8,6 @@ catppuccin.setup({
     mini = {
       enabled = true,
     },
-    telescope = true,
     treesitter = true,
     treesitter_context = true,
   },
