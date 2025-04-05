@@ -105,16 +105,5 @@ return {
     build = function()
       vim.fn['mkdp#util#install']()
     end,
-    event = 'VeryLazy',
-  },
-
-  -- Edit filesystem like a buffer
-  -- https://github.com/stevearc/oil.nvim
-  {
-    'stevearc/oil.nvim',
-    config = function()
-      require('config.oil')
-    end,
-    event = 'VeryLazy',
   },
 }

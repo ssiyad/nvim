@@ -26,6 +26,13 @@ patterns.setup({
   },
 })
 
+-- Files.
+local files = require('mini.files')
+files.setup()
+
+-- Files mappings.
+keymap_set('n', '<Leader>o', files.open)
+
 -- Indent.
 require('mini.indentscope').setup({
   draw = {
@@ -67,21 +74,7 @@ statusline.setup({
 
 -- Finder.
 local pick = require('mini.pick')
-pick.setup({
-  window = {
-    config = function()
-      local height = math.floor(0.618 * vim.o.lines)
-      local width = math.floor(0.618 * vim.o.columns)
-      return {
-        anchor = 'NW',
-        height = height,
-        width = width,
-        row = math.floor(0.5 * (vim.o.lines - height)),
-        col = math.floor(0.5 * (vim.o.columns - width)),
-      }
-    end,
-  },
-})
+pick.setup()
 
 -- Finder mappings.
 keymap_set('n', '<Leader>ff', pick.builtin.files)
