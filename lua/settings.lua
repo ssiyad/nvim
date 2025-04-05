@@ -23,7 +23,7 @@ vim.opt.smartindent = true
 vim.opt.spell = true
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
-vim.opt.winborder = 'solid'
+vim.opt.winborder = 'single'
 vim.opt.updatetime = 750
 
 -- Enable diagnostic message for current line only.
