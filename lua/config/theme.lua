@@ -11,12 +11,6 @@ catppuccin.setup({
     treesitter = true,
     treesitter_context = true,
   },
-  color_overrides = {
-    mocha = {
-      base = '#000000',
-      mantle = '#000000',
-    },
-  },
   custom_highlights = function(colors)
     return {
       FloatBorder = { bg = colors.mantle },
