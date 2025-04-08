@@ -25,17 +25,6 @@ patterns.setup({
   },
 })
 
--- Files.
-local files = require('mini.files')
-files.setup({
-  mappings = {
-    go_in_plus = 'l',
-  },
-})
-
--- Files mappings.
-keymap_set('n', '<Leader>o', files.open)
-
 -- Indent.
 require('mini.indentscope').setup({
   draw = {
