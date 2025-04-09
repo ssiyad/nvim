@@ -1,5 +1,3 @@
-local keymap_set = require('utils.keymap_set')
-
 -- Text objects.
 require('mini.ai').setup()
 
@@ -9,6 +7,7 @@ require('mini.comment').setup()
 -- Dev icons.
 local icons = require('mini.icons')
 icons.setup()
+icons.mock_nvim_web_devicons()
 
 -- Diff.
 require('mini.diff').setup()
@@ -63,14 +62,6 @@ statusline.setup({
     end,
   },
 })
-
--- Finder.
-local pick = require('mini.pick')
-pick.setup()
-
--- Finder mappings.
-keymap_set('n', '<Leader>ff', pick.builtin.files)
-keymap_set('n', '<Leader>fg', pick.builtin.grep_live)
 
 -- Surround.
 require('mini.surround').setup()
