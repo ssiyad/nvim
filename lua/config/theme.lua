@@ -1,6 +1,4 @@
-local catppuccin = require('catppuccin')
-
-catppuccin.setup({
+require('catppuccin').setup({
   integrations = {
     blink_cmp = true,
     copilot_vim = true,
