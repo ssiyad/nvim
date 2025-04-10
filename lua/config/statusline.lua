@@ -1,43 +1,3 @@
--- Text objects.
-require('mini.ai').setup()
-
--- Comment.
-require('mini.comment').setup()
-
--- Dev icons.
-local icons = require('mini.icons')
-icons.setup()
-icons.mock_nvim_web_devicons()
-
--- Diff.
-require('mini.diff').setup()
-
--- Highlight patterns.
-local patterns = require('mini.hipatterns')
-patterns.setup({
-  highlighters = {
-    fixme = { pattern = 'Fix:', group = 'MiniHipatternsFixme' },
-    hack = { pattern = 'Hack:', group = 'MiniHipatternsHack' },
-    todo = { pattern = 'Todo:', group = 'MiniHipatternsTodo' },
-    note = { pattern = 'Note:', group = 'MiniHipatternsNote' },
-    hex_color = patterns.gen_highlighter.hex_color(),
-  },
-})
-
--- Indent.
-require('mini.indentscope').setup({
-  draw = {
-    animation = function()
-      return 0
-    end,
-  },
-  symbol = '│',
-})
-
--- Autopairs.
-require('mini.pairs').setup()
-
--- Statusline.
 local statusline = require('mini.statusline')
 statusline.setup({
   content = {
@@ -62,6 +22,3 @@ statusline.setup({
     end,
   },
 })
-
--- Surround.
-require('mini.surround').setup()

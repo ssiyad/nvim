@@ -8,14 +8,72 @@ return {
     end,
   },
 
-  -- Library of 40+ independent Lua modules improving overall Neovim (version
-  -- 0.8 and higher) experience with minimal effort.
-  -- https://github.com/echasnovski/mini.nvim
+  -- Neovim Lua plugin to extend and create `a`/`i` textobjects. Part of
+  -- 'mini.nvim' library.
+  -- https://github.com/echasnovski/mini.ai
   {
-    'echasnovski/mini.nvim',
-    version = false,
+    'echasnovski/mini.ai',
     config = function()
-      require('config.mini')
+      require('mini.ai').setup()
+    end,
+  },
+
+  -- Work with diff hunks. Part of 'mini.nvim' library.
+  -- https://github.com/echasnovski/mini.diff
+  {
+    'echasnovski/mini.diff',
+    config = function()
+      require('mini.diff').setup()
+    end,
+  },
+
+  -- Highlight patterns in text. Part of 'mini.nvim' library.
+  -- https://github.com/echasnovski/mini.hipatterns
+  {
+    'echasnovski/mini.hipatterns',
+    config = function()
+      require('config.hipatterns')
+    end,
+  },
+
+  -- Icon provider. Part of 'mini.nvim' library.
+  -- https://github.com/echasnovski/mini.icons
+  {
+    'echasnovski/mini.icons',
+    config = function()
+      local icons = require('mini.icons')
+      icons.setup()
+      icons.mock_nvim_web_devicons()
+    end,
+  },
+
+  -- Neovim Lua plugin to automatically manage character pairs. Part of
+  -- 'mini.nvim' library.
+  -- https://github.com/echasnovski/mini.pairs
+  {
+    'echasnovski/mini.pairs',
+    config = function()
+      require('mini.pairs').setup()
+    end,
+  },
+
+  -- Neovim Lua plugin with minimal and fast statusline. Part of 'mini.nvim'
+  -- library.
+  -- https://github.com/echasnovski/mini.statusline
+  {
+    'echasnovski/mini.statusline',
+    config = function()
+      require('config.statusline')
+    end,
+  },
+
+  -- Neovim Lua plugin with fast and feature-rich surround actions. Part of
+  -- 'mini.nvim' library.
+  -- https://github.com/echasnovski/mini.surround
+  {
+    'echasnovski/mini.surround',
+    config = function()
+      require('mini.surround').setup()
     end,
   },
 
@@ -94,7 +152,8 @@ return {
     event = 'VeryLazy',
   },
 
-  -- A better annotation generator. Supports multiple languages and annotation conventions
+  -- A better annotation generator. Supports multiple languages and annotation
+  -- conventions.
   -- https://github.com/danymat/neogen
   {
     'danymat/neogen',
