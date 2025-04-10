@@ -31,9 +31,7 @@ return {
   -- https://github.com/echasnovski/mini.hipatterns
   {
     'echasnovski/mini.hipatterns',
-    config = function()
-      require('config.hipatterns')
-    end,
+    opts = require('config.hipatterns'),
   },
 
   -- Icon provider. Part of 'mini.nvim' library.
