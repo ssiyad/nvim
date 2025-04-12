@@ -14,10 +14,6 @@ local M = {
       },
     },
   },
-  -- Signature is an experimental feature. This may change in the future.
-  signature = {
-    enabled = true,
-  },
   keymap = {
     -- Disable presets.
     preset = 'none',
