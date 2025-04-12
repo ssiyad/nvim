@@ -4,6 +4,15 @@ local M = {
       min_width = 40,
       border = 'none',
     },
+    documentation = {
+      auto_show = true,
+    },
+    list = {
+      selection = {
+        preselect = false,
+        auto_insert = false,
+      },
+    },
   },
   -- Signature is an experimental feature. This may change in the future.
   signature = {
@@ -18,12 +27,6 @@ local M = {
     ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
     ['<C-k>'] = { 'select_prev', 'fallback_to_mappings' },
     ['<C-j>'] = { 'select_next', 'fallback_to_mappings' },
-    ['<C-s>'] = {
-      'show',
-      'show_documentation',
-      'hide_documentation',
-      'fallback',
-    },
     ['<C-space>'] = { 'select_and_accept' },
     ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
     ['<Tab>'] = { 'snippet_forward', 'fallback' },
