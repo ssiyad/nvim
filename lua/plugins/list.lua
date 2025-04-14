@@ -131,21 +131,15 @@ return {
     end,
   },
 
-  -- Find/List.
-  -- https://github.com/nvim-telescope/telescope.nvim
+  -- Improved fzf.vim written in lua.
+  -- https://github.com/ibhagwan/fzf-lua?tab=readme-ov-file
   {
-    'nvim-telescope/telescope.nvim',
-    dependencies = {
-      -- Lua utils.
-      -- https://github.com/nvim-lua/plenary.nvim/
-      'nvim-lua/plenary.nvim',
-
-      -- Live grep with args.
-      -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
-      'nvim-telescope/telescope-live-grep-args.nvim',
-    },
+    'ibhagwan/fzf-lua',
+    -- dependencies = {
+    --   'nvim-tree/nvim-web-devicons',
+    -- },
     config = function()
-      require('config.telescope')
+      require('config.fzf')
     end,
     event = 'VeryLazy',
   },

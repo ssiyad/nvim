@@ -13,11 +13,10 @@ require('catppuccin').setup({
   custom_highlights = function(colors)
     return {
       FloatBorder = { bg = colors.mantle },
-      NvimTreeNormal = { bg = colors.none },
-      TelescopeBorder = { bg = colors.mantle },
-      TelescopeNormal = { bg = colors.mantle },
-      TelescopePreviewTitle = { bg = colors.blue, fg = colors.base },
-      TelescopePromptTitle = { bg = colors.red, fg = colors.base },
+      FzfLuaNormal = { bg = colors.mantle },
+      FzfLuaBorder = { bg = colors.mantle },
+      FzfLuaTitle = { bg = colors.blue, fg = colors.base },
+      FzfLuaPreviewTitle = { bg = colors.red, fg = colors.base },
     }
   end,
 })
