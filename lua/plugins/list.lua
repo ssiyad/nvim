@@ -18,13 +18,14 @@ return {
     end,
   },
 
-  -- Work with diff hunks. Part of 'mini.nvim' library.
-  -- https://github.com/echasnovski/mini.diff
+  -- Git integration for buffers
+  -- https://github.com/lewis6991/gitsigns.nvim
   {
-    'echasnovski/mini.diff',
+    'lewis6991/gitsigns.nvim',
     config = function()
-      require('mini.diff').setup()
+      require('gitsigns').setup()
     end,
+    event = 'VeryLazy',
   },
 
   -- Highlight patterns in text. Part of 'mini.nvim' library.
