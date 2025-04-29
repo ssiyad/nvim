@@ -136,9 +136,6 @@ return {
   -- https://github.com/ibhagwan/fzf-lua?tab=readme-ov-file
   {
     'ibhagwan/fzf-lua',
-    -- dependencies = {
-    --   'nvim-tree/nvim-web-devicons',
-    -- },
     config = function()
       require('config.fzf')
     end,
