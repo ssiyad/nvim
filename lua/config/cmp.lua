@@ -27,6 +27,15 @@ local M = {
     ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
     ['<Tab>'] = { 'snippet_forward', 'fallback' },
   },
+  sources = {
+    default = { 'avante', 'lsp', 'path', 'snippets', 'buffer' },
+    providers = {
+      avante = {
+        module = 'blink-cmp-avante',
+        name = 'Avante',
+      },
+    },
+  },
 }
 
 return M
