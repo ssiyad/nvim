@@ -1,6 +1,3 @@
--- Leader key.
-vim.g.mapleader = ' '
-
 vim.opt.autoindent = true
 vim.opt.autoread = true
 vim.opt.cmdheight = 0
