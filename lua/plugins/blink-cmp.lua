@@ -7,4 +7,3 @@ return {
   opts = require('config.cmp'),
   event = 'VeryLazy',
 }
-
