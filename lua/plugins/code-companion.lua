@@ -11,19 +11,19 @@ return {
       chat = {
         adapter = {
           name = 'copilot',
-          model = 'claude-3.7-sonnet',
+          model = 'gpt-4.1',
         },
       },
       inline = {
         adapter = {
           name = 'copilot',
-          model = 'claude-3.7-sonnet',
+          model = 'gpt-4.1',
         },
       },
       cmd = {
         adapter = {
           name = 'copilot',
-          model = 'claude-3.7-sonnet',
+          model = 'gpt-4.1',
         },
       },
     },
