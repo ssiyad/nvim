@@ -12,11 +12,11 @@ if not (vim.uv or vim.loop).fs_stat(install_path) then
   })
 end
 
-vim.opt.rtp:prepend(install_path)
-require('lazy').setup('plugins')
-
 -- settings
 require('settings')
+
+vim.opt.rtp:prepend(install_path)
+require('lazy').setup('plugins')
 
 -- keymaps
 require('keymaps')
