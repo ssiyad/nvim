@@ -1,4 +1,3 @@
-
 return {
   'catppuccin/nvim',
   config = function()
@@ -14,15 +13,6 @@ return {
         treesitter = true,
         treesitter_context = true,
       },
-      custom_highlights = function(colors)
-        return {
-          FloatBorder = { bg = colors.mantle },
-          FzfLuaNormal = { bg = colors.mantle },
-          FzfLuaBorder = { bg = colors.mantle },
-          FzfLuaTitle = { bg = colors.blue, fg = colors.base },
-          FzfLuaPreviewTitle = { bg = colors.red, fg = colors.base },
-        }
-      end,
     })
 
     vim.cmd.colorscheme('catppuccin')
