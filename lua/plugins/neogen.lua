@@ -1,6 +1,3 @@
--- A better annotation generator. Supports multiple languages and annotation
--- conventions.
--- https://github.com/danymat/neogen
 
 return {
   'danymat/neogen',
@@ -9,7 +6,21 @@ return {
     'nvim-treesitter/nvim-treesitter',
   },
   config = function()
-    require('config.neogen')
+    local neogen = require('neogen')
+    local keymap_set = require('utils.keymap_set')
+
+    neogen.setup({
+      enabled = true,
+      languages = {
+        python = {
+          template = {
+            annotation_convention = 'reST',
+          },
+        },
+      },
+    })
+
+    keymap_set('n', '<Leader>d', neogen.generate)
   end,
   event = 'VeryLazy',
 }
