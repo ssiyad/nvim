@@ -5,6 +5,7 @@ return {
   'echasnovski/mini.pick',
   config = function()
     local keymap_set = require('utils.keymap_set')
+    local visual_text = require('utils.visual_text')
     local pick = require('mini.pick')
 
     pick.setup({
@@ -20,6 +21,12 @@ return {
 
     keymap_set('n', '<Leader>fg', function()
       pick.builtin.grep_live()
+    end)
+
+    keymap_set('v', '<Leader>fg', function()
+      pick.builtin.grep({
+        pattern = visual_text(),
+      })
     end)
 
     keymap_set('n', '<Leader>fb', function()
