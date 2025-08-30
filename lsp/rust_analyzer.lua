@@ -1,5 +1,3 @@
-local M = {
+return {
   cmd = { 'rustup', 'run', 'stable', 'rust-analyzer' },
 }
-
-return M

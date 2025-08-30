@@ -1,4 +1,4 @@
-local M = {
+return {
   init_options = {
     plugins = {
       {
@@ -22,5 +22,3 @@ local M = {
     'vue',
   },
 }
-
-return M

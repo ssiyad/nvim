@@ -1,4 +1,4 @@
-local M = {
+return {
   settings = {
     python = {
       analysis = {
@@ -8,5 +8,3 @@ local M = {
     },
   },
 }
-
-return M
