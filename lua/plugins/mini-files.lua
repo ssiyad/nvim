@@ -11,7 +11,11 @@ return {
 
     keymap_set('n', '<Leader>o', function()
       local buf_name = vim.api.nvim_buf_get_name(0)
-      files.open(buf_name, false)
+      if buf_name == '' then
+        files.open()
+      else
+        files.open(buf_name, false)
+      end
     end)
   end,
 }
