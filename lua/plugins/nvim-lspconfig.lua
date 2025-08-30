@@ -1,7 +1,7 @@
 return {
   'neovim/nvim-lspconfig',
   config = function()
-    local lsp_dir = vim.fn.stdpath('config') .. '/lsp'
+    local lsp_dir = vim.fn.stdpath('config') .. '/after/' .. '/lsp'
     local lsp_servers = {}
 
     if vim.fn.isdirectory(lsp_dir) == 1 then
