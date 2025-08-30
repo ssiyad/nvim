@@ -14,6 +14,5 @@ end
 
 vim.opt.rtp:prepend(install_path)
 require('settings')
-require('lazy').setup('plugins')
 require('keymaps')
-require('lsp')
+require('lazy').setup('plugins')
