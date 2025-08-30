@@ -1,8 +1,8 @@
 -- Navigate and manipulate file system. Part of 'mini.nvim' library.
--- https://github.com/echasnovski/mini.files
+-- https://github.com/nvim-mini/mini.files
 
 return {
-  'echasnovski/mini.files',
+  'nvim-mini/mini.files',
   config = function()
     local keymap_set = require('utils.keymap_set')
     local files = require('mini.files')

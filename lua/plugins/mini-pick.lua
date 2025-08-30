@@ -1,8 +1,8 @@
 -- Pick anything. Part of 'mini.nvim' library.
--- https://github.com/echasnovski/mini.pick
+-- https://github.com/nvim-mini/mini.pick
 
 return {
-  'echasnovski/mini.pick',
+  'nvim-mini/mini.pick',
   config = function()
     local keymap_set = require('utils.keymap_set')
     local visual_text = require('utils.visual_text')

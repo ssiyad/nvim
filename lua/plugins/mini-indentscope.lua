@@ -1,8 +1,8 @@
 -- Neovim Lua plugin to visualize and operate on indent scope. Part of 'mini.nvim' library.
--- https://github.com/echasnovski/mini.indentscope
+-- https://github.com/nvim-mini/mini.indentscope
 
 return {
-  'echasnovski/mini.indentscope',
+  'nvim-mini/mini.indentscope',
   config = function()
     local indentscope = require('mini.indentscope')
 

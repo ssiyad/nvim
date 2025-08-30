@@ -1,9 +1,9 @@
 -- Neovim Lua plugin with fast and feature-rich surround actions. Part of
 -- 'mini.nvim' library.
--- https://github.com/echasnovski/mini.surround
+-- https://github.com/nvim-mini/mini.surround
 
 return {
-  'echasnovski/mini.surround',
+  'nvim-mini/mini.surround',
   config = function()
     require('mini.surround').setup({
       search_method = 'cover_or_next',

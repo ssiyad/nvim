@@ -1,7 +1,7 @@
 -- Work with diff hunks. Part of 'mini.nvim' library.
--- https://github.com/echasnovski/mini.diff
+-- https://github.com/nvim-mini/mini.diff
 return {
-  'echasnovski/mini.diff',
+  'nvim-mini/mini.diff',
   version = false,
   config = function()
     require('mini.diff').setup({

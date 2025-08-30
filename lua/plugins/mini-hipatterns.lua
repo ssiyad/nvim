@@ -1,4 +1,4 @@
 return {
-  'echasnovski/mini.hipatterns',
+  'nvim-mini/mini.hipatterns',
   opts = require('plugins.hipatterns'),
 }

@@ -1,10 +1,10 @@
 -- Hipatterns configuration
 
 return {
-  'echasnovski/mini.hipatterns',
+  'nvim-mini/mini.hipatterns',
   config = function()
     local hipatterns = require('mini.hipatterns')
-    
+
     hipatterns.setup({
       highlighters = {
         fixme = { pattern = 'Fix!', group = 'MiniHipatternsFixme' },
@@ -19,3 +19,4 @@ return {
     })
   end,
 }
+
