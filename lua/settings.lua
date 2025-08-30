@@ -5,7 +5,6 @@ vim.opt.autoread = true
 vim.opt.cmdheight = 0
 vim.opt.cursorline = true
 vim.opt.ff = 'unix'
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevel = 99
 vim.opt.foldmethod = 'expr'
 vim.opt.ignorecase = true
