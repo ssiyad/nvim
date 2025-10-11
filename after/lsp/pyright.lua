@@ -3,7 +3,7 @@ return {
     python = {
       analysis = {
         useLibraryCodeForTypes = true,
-        typeCheckingMode = 'off',
+        typeCheckingMode = 'on',
       },
     },
   },
