@@ -9,7 +9,7 @@ return {
           local mode, hl_mode = statusline.section_mode({ trunc_width = 120 })
           local diff = statusline.section_diff({ trunc_width = 75 })
           local diagnostics = statusline.section_diagnostics({ trunc_width = 75 })
-          local filename = statusline.section_filename({ trunc_width = 140 })
+          local filename = vim.fn.expand('%:~:.')
           local fileinfo = statusline.section_fileinfo({ trunc_width = 120 })
           local location = statusline.section_location({ trunc_width = 75 })
           local search = statusline.section_searchcount({ trunc_width = 75 })
