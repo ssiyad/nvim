@@ -2,16 +2,16 @@ return {
   'catppuccin/nvim',
   config = function()
     require('catppuccin').setup({
+      transparent_background = true,
+      float = {
+        transparent = true,
+      },
       integrations = {
         blink_cmp = true,
-        copilot_vim = true,
-        markdown = true,
         mini = {
           enabled = true,
         },
-        telescope = true,
         treesitter = true,
-        treesitter_context = true,
       },
     })
 
