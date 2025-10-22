@@ -13,6 +13,13 @@ return {
         },
         treesitter = true,
       },
+      custom_highlights = function(colors)
+        return {
+          MiniStatuslineFilename = {
+            bg = colors.none,
+          },
+        }
+      end,
     })
 
     vim.cmd.colorscheme('catppuccin')
