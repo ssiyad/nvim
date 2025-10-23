@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 vim.opt.autoindent = true
 vim.opt.autoread = true
 vim.opt.cmdheight = 0
+vim.opt.conceallevel = 2
 vim.opt.cursorline = true
 vim.opt.ff = 'unix'
 vim.opt.foldlevel = 99
@@ -21,8 +22,8 @@ vim.opt.smartindent = true
 vim.opt.spell = true
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
-vim.opt.winborder = 'solid'
 vim.opt.updatetime = 750
+vim.opt.winborder = 'solid'
 
 -- Enable diagnostic message for current line only.
 vim.diagnostic.config({
