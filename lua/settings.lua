@@ -3,7 +3,6 @@ vim.g.mapleader = ' '
 vim.opt.autoindent = true
 vim.opt.autoread = true
 vim.opt.cmdheight = 0
-vim.opt.conceallevel = 2
 vim.opt.cursorline = true
 vim.opt.ff = 'unix'
 vim.opt.foldlevel = 99
