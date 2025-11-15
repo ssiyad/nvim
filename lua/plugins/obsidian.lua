@@ -1,26 +1,23 @@
 return {
   'obsidian-nvim/obsidian.nvim',
   version = '*',
-  ---@module 'obsidian'
-  ---@type obsidian.config
-  opts = {
-    legacy_commands = false,
-    workspaces = {
-      {
-        name = 'inbox',
-        path = '~/notes/inbox',
+  config = function()
+    require('obsidian').setup({
+      legacy_commands = false,
+      workspaces = {
+        {
+          name = 'inbox',
+          path = '~/notes/inbox',
+        },
+        {
+          name = 'frappe',
+          path = '~/notes/frappe',
+        },
       },
-      {
-        name = 'frappe',
-        path = '~/notes/frappe',
+      footer = {
+        enabled = false,
       },
-    },
-    footer = {
-      enabled = false,
-    },
-  },
-  config = function(_, opts)
-    require('obsidian').setup(opts)
+    })
 
     vim.api.nvim_create_autocmd('User', {
       pattern = 'ObsidianNoteEnter',
