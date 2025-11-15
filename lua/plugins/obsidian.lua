@@ -14,6 +14,10 @@ return {
           path = '~/notes/frappe',
         },
       },
+      daily_notes = {
+        folder = 'diary',
+        workdays_only = false,
+      },
       footer = {
         enabled = false,
       },
