@@ -15,5 +15,20 @@ return {
         path = '~/notes/frappe',
       },
     },
+    footer = {
+      enabled = false,
+    },
   },
+  config = function(_, opts)
+    require('obsidian').setup(opts)
+
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'ObsidianNoteEnter',
+      callback = function()
+        vim.wo.conceallevel = 2
+        vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo.foldmethod = 'expr'
+      end,
+    })
+  end,
 }
