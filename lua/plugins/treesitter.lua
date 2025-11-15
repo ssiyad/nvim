@@ -18,6 +18,7 @@ return {
       'json5',
       'lua',
       'markdown',
+      'markdown_inline',
       'python',
       'regex',
       'rust',
@@ -45,6 +46,8 @@ return {
       callback = function()
         vim.treesitter.start()
         vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo.foldmethod = 'expr'
+        vim.wo.foldlevel = 99
         vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
       end,
     })
