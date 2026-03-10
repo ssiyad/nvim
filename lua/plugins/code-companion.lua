@@ -32,7 +32,7 @@ return {
       chat = {
         window = {
           position = 'right',
-          width = 0.5,
+          width = 0.3,
         },
       },
     },
