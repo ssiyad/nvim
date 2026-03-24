@@ -1,6 +1,3 @@
--- ✨ AI-powered coding, seamlessly in Neovim
--- https://github.com/olimorris/codecompanion.nvim
-
 return {
   'olimorris/codecompanion.nvim',
   dependencies = {
@@ -25,14 +22,6 @@ return {
         adapter = {
           name = 'copilot',
           model = 'gpt-4.1',
-        },
-      },
-    },
-    display = {
-      chat = {
-        window = {
-          position = 'right',
-          width = 0.3,
         },
       },
     },
