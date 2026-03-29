@@ -3,10 +3,6 @@ return {
   config = function()
     require('catppuccin').setup({
       transparent_background = true,
-      no_italic = true,
-      float = {
-        transparent = true,
-      },
       integrations = {
         blink_cmp = true,
         mini = {
