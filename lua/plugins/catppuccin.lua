@@ -3,6 +3,10 @@ return {
   config = function()
     require('catppuccin').setup({
       transparent_background = true,
+      term_colors = true,
+      float = {
+        transparent = true,
+      },
       integrations = {
         blink_cmp = true,
         mini = {
@@ -18,7 +22,6 @@ return {
         }
       end,
     })
-
     vim.cmd.colorscheme('catppuccin')
   end,
 }
