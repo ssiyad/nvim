@@ -13,6 +13,7 @@ return {
       end
     end
 
+    vim.lsp.inlay_hint.enable()
     vim.lsp.enable(lsp_servers)
   end,
 }
