@@ -1,7 +1,5 @@
 local js = {
-  'eslint_d',
-  'prettier',
-  'rustywind',
+  'biome',
 }
 
 local html = {
