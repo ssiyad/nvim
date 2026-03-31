@@ -4,7 +4,6 @@
 return {
   'nvim-mini/mini.pick',
   config = function()
-    local keymap_set = require('utils.keymap_set')
     local visual_text = require('utils.visual_text')
     local pick = require('mini.pick')
 
@@ -15,26 +14,26 @@ return {
       },
     })
 
-    keymap_set('n', '<Leader>ff', function()
+    vim.keymap.set('n', '<Leader>ff', function()
       pick.builtin.files()
-    end)
+    end, { noremap = true, silent = true })
 
-    keymap_set('n', '<Leader>fg', function()
+    vim.keymap.set('n', '<Leader>fg', function()
       pick.builtin.grep_live()
-    end)
+    end, { noremap = true, silent = true })
 
-    keymap_set('v', '<Leader>fg', function()
+    vim.keymap.set('v', '<Leader>fg', function()
       pick.builtin.grep({
         pattern = visual_text(),
       })
-    end)
+    end, { noremap = true, silent = true })
 
-    keymap_set('n', '<Leader>fb', function()
+    vim.keymap.set('n', '<Leader>fb', function()
       pick.builtin.buffers()
-    end)
+    end, { noremap = true, silent = true })
 
-    keymap_set('n', '<Leader>fh', function()
+    vim.keymap.set('n', '<Leader>fh', function()
       pick.builtin.help()
-    end)
+    end, { noremap = true, silent = true })
   end,
 }

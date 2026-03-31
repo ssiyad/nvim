@@ -7,7 +7,6 @@ return {
   },
   config = function()
     local neogen = require('neogen')
-    local keymap_set = require('utils.keymap_set')
 
     neogen.setup({
       enabled = true,
@@ -20,7 +19,7 @@ return {
       },
     })
 
-    keymap_set('n', '<Leader>d', neogen.generate)
+    vim.keymap.set('n', '<Leader>d', neogen.generate, { noremap = true, silent = true })
   end,
   event = 'VeryLazy',
 }
