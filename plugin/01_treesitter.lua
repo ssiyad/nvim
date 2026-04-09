@@ -1,4 +1,4 @@
-vim.pack.add({ 'https://github.com/nvim-treesitter/nvim-treesitter' })
+vim.pack.add({ { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main' } })
 
 local ts = require('nvim-treesitter')
 
