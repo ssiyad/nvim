@@ -46,6 +46,7 @@ require('obsidian').setup({
     folder = 'diary',
     template = 'diary',
     alias_format = '%B %-d, %Y',
+    workdays_only = false,
     default_tags = {
       'dialy',
       'journal',
