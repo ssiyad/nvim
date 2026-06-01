@@ -37,8 +37,9 @@ require('obsidian').setup({
       ['meeting-notes'] = {
         notes_subdir = 'meetings',
       },
-      ['work-updates'] = {
+      ['work-update'] = {
         notes_subdir = 'work-updates',
+        note_id_func = require('obsidian.builtin').zettel_id,
       },
     },
   },
@@ -55,11 +56,6 @@ require('obsidian').setup({
   },
   ui = {
     enable = true,
-  },
-  completion = {
-    nvim_cmp = false,
-    blink = true,
-    min_chars = 1,
   },
 })
 
