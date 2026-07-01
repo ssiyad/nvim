@@ -12,5 +12,4 @@ if vim.fn.isdirectory(lsp_dir) == 1 then
   end
 end
 
-vim.lsp.inlay_hint.enable()
 vim.lsp.enable(lsp_servers)
