@@ -8,21 +8,20 @@ require('obsidian').setup({
       path = '~/notes',
     },
   },
-  note_id_func = function(title)
-    local date = os.date('%Y-%m-%d')
-    local formatted = title:gsub(' ', '-'):lower() or ''
-    return date .. '-' .. formatted .. '.md'
+  notes_subdir = 'notes',
+  new_notes_location = 'notes_subdir',
+  note_id_func = function(title, path)
+    local id = require('obsidian.builtin').title_id(title, path)
+    local year = os.date('%Y')
+    local month = os.date('%m')
+    local day = os.date('%d')
+    return year .. '/' .. month .. '/' .. day .. '/' .. id
   end,
   attachments = {
     folder = './assets',
     confirm_img_paste = false,
     img_name_func = function()
-      local random = math.random
-      local s = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
-      return string.gsub(s, '[xy]', function(c)
-        local v = (c == 'x') and random(0, 0xf) or random(8, 0xb)
-        return string.format('%x', v)
-      end)
+      return vim.fn.system('uuidgen'):gsub('%s+', '')
     end,
   },
   templates = {
@@ -34,22 +33,24 @@ require('obsidian').setup({
         notes_subdir = 'blog',
         note_id_func = require('obsidian.builtin').title_id,
       },
-      ['meeting-notes'] = {
-        notes_subdir = 'meetings',
-      },
       ['work-update'] = {
-        notes_subdir = 'work-updates',
-        note_id_func = require('obsidian.builtin').zettel_id,
+        note_id_func = function()
+          local year = os.date('%Y')
+          local month = os.date('%m')
+          local day = os.date('%d')
+          local week = os.date('%V')
+          return year .. '/' .. month .. '/' .. day .. '/work-update-week-' .. week
+        end,
       },
     },
   },
   daily_notes = {
-    folder = 'diary',
     template = 'diary',
+    date_format = '%Y/%m/%d/diary',
     alias_format = '%B %-d, %Y',
     workdays_only = false,
     default_tags = {
-      'dialy',
+      'daily',
       'journal',
       'log',
     },
