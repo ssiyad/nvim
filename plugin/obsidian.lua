@@ -57,21 +57,34 @@ require('obsidian').setup({
   },
   ui = {
     enable = true,
+    ignore_conceal_warn = true,
   },
 })
 
 vim.api.nvim_create_autocmd('User', {
   pattern = 'ObsidianNoteEnter',
   callback = function(ev)
+    -- Quick switch notes.
     vim.keymap.set('n', '<leader>ff', '<cmd>Obsidian quick_switch<cr>', {
       buffer = true,
       desc = 'Quick switch notes',
       noremap = false,
     })
+    -- Search in notes.
     vim.keymap.set('n', '<leader>fg', '<cmd>Obsidian search<cr>', {
       buffer = true,
       desc = 'Search in notes',
       noremap = false,
     })
+    -- Change conceal level to 2 for better rendering of markdown.
+    vim.wo.conceallevel = 2
+  end,
+})
+
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'ObsidianNoteLeave',
+  callback = function(ev)
+    -- Reset conceal level to 0 when leaving the note.
+    vim.wo.conceallevel = 0
   end,
 })
