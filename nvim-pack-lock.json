@@ -70,7 +70,7 @@
       "src": "https://github.com/danymat/neogen"
     },
     "neovim": {
-      "rev": "a3180331fd42ba6acf4c06fe4cc901db7586ab37",
+      "rev": "7c13089ea4a2f6a26939f3ff40b3bc2fe64e5f21",
       "src": "https://github.com/acid-theme/neovim"
     },
     "nvim": {
