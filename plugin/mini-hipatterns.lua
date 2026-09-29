@@ -16,5 +16,7 @@ require('mini.hipatterns').setup({
     refactor_ = { pattern = 'REFACTOR:', group = 'MiniHipatternsHack' },
     rust_todo = { pattern = 'todo!', group = 'MiniHipatternsTodo' },
     rust_unimplemented = { pattern = 'unimplemented!', group = 'MiniHipatternsHack' },
+    notes_deadline = { pattern = '@deadline', group = 'MiniHipatternsTodo' },
+    notes_due = { pattern = '@due', group = 'MiniHipatternsFixme' },
   },
 })
