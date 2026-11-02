@@ -1,5 +1,11 @@
 vim.pack.add({ 'https://github.com/obsidian-nvim/obsidian.nvim' })
 
+-- Unique file names (YYYY-MM-DD-slug), so wiki links resolve the same in
+-- Obsidian and here. See ~/notes/Home.md for the vault layout.
+local function dated_id(title, path)
+  return os.date('%Y-%m-%d') .. '-' .. require('obsidian.builtin').title_id(title, path)
+end
+
 require('obsidian').setup({
   legacy_commands = false,
   workspaces = {
@@ -8,17 +14,16 @@ require('obsidian').setup({
       path = '~/notes',
     },
   },
-  notes_subdir = 'notes',
+  -- New notes land in the inbox. Give them an area, then move them to their
+  -- type folder: notes/, meetings/ or posts/.
+  notes_subdir = 'inbox',
   new_notes_location = 'notes_subdir',
-  note_id_func = function(title, path)
-    local id = require('obsidian.builtin').title_id(title, path)
-    local year = os.date('%Y')
-    local month = os.date('%m')
-    local day = os.date('%d')
-    return year .. '/' .. month .. '/' .. day .. '/' .. id
-  end,
+  note_id_func = dated_id,
+  frontmatter = {
+    sort = { 'id', 'aliases', 'type', 'area', 'tags' },
+  },
   attachments = {
-    folder = './assets',
+    folder = 'assets',
     confirm_img_paste = false,
     img_name_func = function()
       return vim.fn.system('uuidgen'):gsub('%s+', '')
@@ -34,26 +39,32 @@ require('obsidian').setup({
         note_id_func = require('obsidian.builtin').title_id,
       },
       ['work-update'] = {
+        notes_subdir = 'work-updates',
         note_id_func = function()
-          local year = os.date('%Y')
-          local month = os.date('%m')
-          local day = os.date('%d')
-          local week = os.date('%V')
-          return year .. '/' .. month .. '/' .. day .. '/work-update-week-' .. week
+          return os.date('%G-W%V')
         end,
+      },
+      ['meeting-notes'] = {
+        notes_subdir = 'meetings',
+        note_id_func = dated_id,
+      },
+      post = {
+        notes_subdir = 'posts',
+        note_id_func = dated_id,
+      },
+      note = {
+        notes_subdir = 'notes',
+        note_id_func = dated_id,
       },
     },
   },
   daily_notes = {
+    folder = 'journal',
     template = 'diary',
-    date_format = '%Y/%m/%d/diary',
+    date_format = '%Y/%Y-%m-%d',
     alias_format = '%B %-d, %Y',
     workdays_only = false,
-    default_tags = {
-      'daily',
-      'journal',
-      'log',
-    },
+    default_tags = {},
   },
   ui = {
     enable = true,
