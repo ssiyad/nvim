@@ -18,7 +18,6 @@ return {
     'javascript',
     'javascriptreact',
     'typescriptreact',
-    'lua',
     'vue',
   },
 }
