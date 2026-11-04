@@ -8,6 +8,8 @@ your own setup.
   `nvim-pack-lock.json`.
 - One file for each plugin in `plugin/`.
 - LSP with `nvim-lspconfig`. Each file in `after/lsp/` enables one server.
+- Language servers, formatters and the tree-sitter CLI from `mason.nvim`.
+  `plugin/00_mason.lua` installs the missing ones on start.
 - Autocomplete with `blink.cmp`.
 - Format on save with `conform.nvim`.
 - Treesitter for syntax highlighting.
@@ -21,7 +23,9 @@ your own setup.
 ### Prerequisites
 - Neovim 0.12 or later (for `vim.pack`)
 - Git
-- The language servers and formatters that you want to use, in your `PATH`
+- `curl`, `unzip`, `tar` and Node.js with `npm`, for `mason.nvim`
+- `rustup` with `rust-analyzer` and Go with `gopls`, if you use them. They
+  are not installed by Mason.
 
 ### Steps
 ```sh
