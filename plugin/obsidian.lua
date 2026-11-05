@@ -1,3 +1,9 @@
+-- Skip on machines without the vault: obsidian.nvim errors on start when no
+-- workspace exists.
+if not vim.uv.fs_stat(vim.fn.expand('~/notes')) then
+  return
+end
+
 vim.pack.add({ 'https://github.com/obsidian-nvim/obsidian.nvim' })
 
 -- Unique file names (YYYY-MM-DD-slug), so wiki links resolve the same in
